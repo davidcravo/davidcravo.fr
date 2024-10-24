@@ -37,7 +37,7 @@ couleur 3 #FFCC00
 .gradient_title
 {
     padding-bottom: 3rem;
-    color: #0D4663;
+    color: #d7d7d7;
     background: linear-gradient(#ffffff22, #00000022 , #00000022);
     box-shadow: 0 1px 0 0 black;
 }

@@ -1,0 +1,15 @@
+body{
+    background-color: #E5E9E8;
+    background-image: url(../images/main/background_tree_paysage.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #242424;
+}
+
+article, label{
+   background-color: #E5E9E899; 
+}
+
+article{
+    padding: 0.5rem;
+}

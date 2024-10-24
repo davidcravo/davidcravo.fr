@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title ?></title>
         <link rel="stylesheet" href="/assets/css/style_home.css">
+        <link rel="stylesheet" href="/assets/css/style_body.css">
         <link rel="stylesheet" href="/assets/css/style_achievements.css">
         <link rel="stylesheet" href="/assets/css/style_contact.css">
         <link rel="stylesheet" href="/assets/css/style_education.css">

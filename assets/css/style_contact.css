@@ -17,14 +17,14 @@
 .contact_main input,
 .contact_main select{
     height: 3rem;
-    outline-color: #0000ff50;
+    outline-color: #124F6E70;
     padding: 0 1rem;
 }
 
 .contact_main textarea{
     height: 20rem;
     resize: none;
-    outline-color: #0000ff50;
+    outline-color: #124F6E70;
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -33,14 +33,13 @@
     margin: 1rem 0;
     height: 4rem;
     font-size: 2rem;
-    background-color: #0000ff90;
-    color: #fff;
+    background-color: #124F6E70;
     border: none;
     cursor: pointer;
 }
 
 .contact_main button:hover{
-    background-color: #0000ff70;
+    background-color: #124F6E90;
 }
 
 @media (min-width: 600px) and (max-width: 1024px)
