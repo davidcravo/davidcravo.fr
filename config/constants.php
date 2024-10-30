@@ -27,9 +27,7 @@ define ('SKILLS', [
         'IntelliJ'
     ],
     'foreign_languages' => [
-        'Anglais',
-        'Espagnol',
-        'Portugais'
+        'Anglais'
     ]
     
 ]);
@@ -43,6 +41,6 @@ define ('SKILLS_TITLES',[
 ]);
 
 define ('LINKS',[
-    'github' => 'https://github.com/D-CRAVO',
+    'github' => 'https://github.com/davidcravo',
     'linkedin' => 'https://www.linkedin.com/in/davidcravo/'
 ]);
