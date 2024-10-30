@@ -16,7 +16,6 @@
             </div>
             <div class="education_content">
                 <h1><?= $project['name'] ?></h1>
-                <h3><?= $project['training_center']?></h3>
                 <h5><?= $project['date'] ?></h5>
             </div>
         </article>
