@@ -15,7 +15,6 @@
         <nav >
             <ul>
                 <?= nav_item('/templates/home.php', 'Acceuil') ?>
-                <?= nav_item('/templates/profile.php', 'Profil') ?>
                 <?= nav_item('/templates/experience.php', 'Expérience') ?>
                 <?= nav_item('/templates/education.php', 'Formations') ?>
                 <?= nav_item('/templates/skills.php', 'Compétences') ?>

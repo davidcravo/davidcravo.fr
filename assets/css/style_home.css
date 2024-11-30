@@ -6,30 +6,36 @@ couleur 3 #FFCC00
 
 .home_image{
     border-radius: 50%;
+    border: solid 10px #0D4663;
     width: 15rem;
     height: 100%;
-    margin: 3rem auto;
+    margin: 1rem auto 0 auto;
 }
 
 .document{
+    border: solid 3.5px #0D4663;
     font-size: 2rem;
+    font-weight: 700;
     color: #0D4663;
     text-decoration: none;
-    margin: 2.5rem;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem;
 }
 
 .home_main{
     text-align: center;
 }
 
-.home_article{
+.home_section{
     display: flex;
     flex-direction: column;
 }
 
 .home_documents{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     text-align: left;
 }
@@ -42,10 +48,25 @@ couleur 3 #FFCC00
     box-shadow: 0 1px 0 0 black;
 }
 
+.home_description{
+    text-align: justify;
+    padding: 0 2rem;
+}
+
+.home_description span{
+    font-weight: 700;
+}
+
+.home_description .hello{
+    color: #0D4663;
+    font-size: 1.5em;
+    padding-left: 5rem;
+}
+
 @media (min-width: 600px)
 {
     .home_image{
-        width: 40rem;
+        width: 20rem;
         height: 100%;
     }
 
@@ -57,5 +78,10 @@ couleur 3 #FFCC00
 
     .home_article{
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .document{
+        margin-top: 2rem;
     }
 }
