@@ -3,6 +3,22 @@
     text-align: center;
 }
 
+.skills_article ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.skills_article li{
+    padding: 0 1rem;
+}
+
+.skills_image{
+    width: 5rem;
+    height: 5rem;
+}
+
 
 @media (min-width: 600px) and (max-width: 1024px)
 {

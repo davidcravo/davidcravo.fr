@@ -43,6 +43,41 @@ function get_csv_files($file, $template){
                 'description' => $data[6],
                 'logo' => $data[7]
             ];
+        }elseif($template === 'programing_languages'){
+            $files[]= [
+                'id' => $data[0],
+                'name' => $data[1],
+                'logo' => $data[2],
+                'description' => $data[3]
+            ];
+        }elseif($template === 'frameworks'){
+            $files[]= [
+                'id' => $data[0],
+                'name' => $data[1],
+                'logo' => $data[2],
+                'description' => $data[3]
+            ];
+        }elseif($template === 'database'){
+            $files[]= [
+                'id' => $data[0],
+                'name' => $data[1],
+                'logo' => $data[2],
+                'description' => $data[3]
+            ];
+        }elseif($template === 'tools'){
+            $files[]= [
+                'id' => $data[0],
+                'name' => $data[1],
+                'logo' => $data[2],
+                'description' => $data[3]
+            ];
+        }elseif($template === 'foreign_languages'){
+            $files[]= [
+                'id' => $data[0],
+                'name' => $data[1],
+                'logo' => $data[2],
+                'description' => $data[3]
+            ];
         }
     }
 
