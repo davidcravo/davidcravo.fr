@@ -20,6 +20,7 @@
                 <?= nav_item('/templates/skills.php', 'Compétences') ?>
                 <?= nav_item('/templates/achievements.php', 'Réalisations') ?>
                 <?= nav_item('/templates/contact.php', 'Contact') ?>
+                <?= nav_item('/templates/dashboard.php', 'Dashboard') ?>
             </ul>
         </nav>
     </div>

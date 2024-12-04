@@ -4,10 +4,15 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     color: #242424;
+    
+}
+
+main{
+    background-color: #e5e9e8da;
 }
 
 section, article, label{
-   background-color: #e5e9e8da; 
+    
 }
 
 article{
