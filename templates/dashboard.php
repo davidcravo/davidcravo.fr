@@ -1,7 +1,12 @@
 <?php
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'init.php';
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'head.php';
-//require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'authentification.php';
+
+user_log_in();
+
 
 $file_counter_total = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'statistics' . DIRECTORY_SEPARATOR . 'counter';
 $file_counter_daily = $file_counter_total . '-' . date('Y-m-d');
@@ -24,22 +29,22 @@ $months = [
 ];
 $month = (int)date('m');
 $month_selected = empty($_GET['month']) ? null : (int)$_GET['month'];
+
+$counter_total = new Counter($file_counter_total);
+$counter_total->increment();
+$counter_daily = new Counter($file_counter_daily);
+$counter_daily->increment();
+if($year_selected && $month_selected){
+    $visits = $counter_total->recover_month($year_selected, $month_selected);
+    $detail = $counter_total->recover_month_details($year_selected, $month_selected);
+}else{
+    $visits = $counter_total->recover();
+}
+
 ?>
 
 <main class="main_dashboard">
     <section>
-        <?php
-            $counter_total = new Counter($file_counter_total);
-            $counter_total->increment();
-            $counter_daily = new Counter($file_counter_daily);
-            $counter_daily->increment();
-            if($year_selected && $month_selected){
-                $visits = $counter_total->recover_month($year_selected, $month_selected);
-                $detail = $counter_total->recover_month_details($year_selected, $month_selected);
-            }else{
-                $visits = $counter_total->recover();
-            }
-        ?>
         <div class="row">
             <div class="col-md-4">
                 <div class="list-group">
@@ -53,7 +58,7 @@ $month_selected = empty($_GET['month']) ? null : (int)$_GET['month'];
                             </div>
                         <?php endif; ?>
                     <?php endfor; ?>
-                    </div>
+                </div>
             </div>
             <div class="col-md-8">
                 <div class="card mb-4">

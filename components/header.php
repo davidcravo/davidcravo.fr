@@ -23,5 +23,8 @@
                 <?= nav_item('/templates/dashboard.php', 'Dashboard') ?>
             </ul>
         </nav>
+        <div class="links">
+            <a href="/templates/logout.php"><img src="/assets/images/header/login.png" alt="Logo connexion"></a>
+        </div>
     </div>
 </header>            
