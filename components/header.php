@@ -9,8 +9,8 @@
             <img src="../assets/images/david_cravo_logo.jpeg" alt="Logo de David CRAVO">
         </a>
         <div class="links">
-            <a href="<?= LINKS['github'] ?>" target="_blank"><img src="../assets/images/header/github.png" alt="logo Github"></a>
-            <a href="<?= LINKS['linkedin'] ?>" target="_blank"><img src="/assets/images/header/linkedin.png" alt="logo Linkedin"></a>
+            <a href="https://github.com/davidcravo" target="_blank"><img src="../assets/images/header/github.png" alt="logo Github"></a>
+            <a href="https://www.linkedin.com/in/davidcravo/" target="_blank"><img src="/assets/images/header/linkedin.png" alt="logo Linkedin"></a>
         </div>
         <nav >
             <ul>

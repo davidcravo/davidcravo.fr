@@ -1,37 +1,5 @@
 <?php
 
-define ('SKILLS', [
-    'programing_languages' => [
-        'HTML & CSS',
-        'Javascript',
-        'PHP',
-        'SQL',
-        "C#",
-        'Java',
-        'Angular'
-    ],
-    'frameworks' => [
-        'Spring',
-        'Angular Material'
-    ],
-    'database' => [
-        'Postgres'
-    ],
-    'tools'=> [
-        'Modélisation UML',
-        'Méthode Merise',
-        'Git',
-        'Visual Studio',
-        'Enterprise Architect',
-        'Visual Studio Code',
-        'IntelliJ'
-    ],
-    'foreign_languages' => [
-        'Anglais'
-    ]
-    
-]);
-
 define ('SKILLS_TITLES',[
     'programing_languages' => 'Langage de programmation',
     'frameworks' => 'Frameworks et CMS',
@@ -40,7 +8,17 @@ define ('SKILLS_TITLES',[
     'foreign_languages' => 'Langues étrangères'
 ]);
 
-define ('LINKS',[
-    'github' => 'https://github.com/davidcravo',
-    'linkedin' => 'https://www.linkedin.com/in/davidcravo/'
-]);
+define ('MONTHS', [
+    '01' => 'Janvier',
+    '02' => 'Février',
+    '03' => 'Mars',
+    '04' => 'Avril',
+    '05' => 'Mai',
+    '06' => 'Juin',
+    '07' => 'Juillet',
+    '08' => 'Août',
+    '09' => 'Septembre',
+    '10' => 'Octobre',
+    '11' => 'Novembre',
+    '12' => 'Décembre'
+]);   

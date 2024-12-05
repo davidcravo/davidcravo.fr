@@ -1,32 +1,17 @@
 <?php
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'init.php';
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'head.php';
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'head.php';
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'authentification.php';
 
 user_log_in();
-
 
 $file_counter_total = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'statistics' . DIRECTORY_SEPARATOR . 'counter';
 $file_counter_daily = $file_counter_total . '-' . date('Y-m-d');
 
 $year = (int)date('Y');
 $year_selected = empty($_GET['year']) ? null : (int)$_GET['year'];
-$months = [
-    '01' => 'Janvier',
-    '02' => 'Février',
-    '03' => 'Mars',
-    '04' => 'Avril',
-    '05' => 'Mai',
-    '06' => 'Juin',
-    '07' => 'Juillet',
-    '08' => 'Août',
-    '09' => 'Septembre',
-    '10' => 'Octobre',
-    '11' => 'Novembre',
-    '12' => 'Décembre'
-];
 $month = (int)date('m');
 $month_selected = empty($_GET['month']) ? null : (int)$_GET['month'];
 
@@ -52,8 +37,8 @@ if($year_selected && $month_selected){
                         <a class="list-group-item <?= $year - $i === $year_selected ? 'active' : ''; ?>" href="dashboard.php?year=<?= $year - $i ?>"><?= $year - $i ?></a>
                         <?php if($year - $i === $year_selected): ?>
                             <div class="list-group">
-                            <?php foreach($months as $k => $value): ?>
-                                <a href="dashboard.php?year=<?=$year_selected ?>&month=<?= $k ?>" class="list-group-item <?= $month_selected === $k ? 'active' : ''; ?>"><?= $value ?></a>
+                            <?php foreach(MONTHS as $k => $value): ?>
+                                <a href="dashboard.php?year=<?=$year_selected ?>&month=<?= $k ?>" class="list-group-item <?= $month_selected === (int)$k ? 'active' : ''; ?>"><?= $value ?></a>
                             <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
@@ -90,4 +75,4 @@ if($year_selected && $month_selected){
     </section>
 </main>
 
-<?php require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'footer.php'; ?>
+<?php require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'footer.php'; ?>
