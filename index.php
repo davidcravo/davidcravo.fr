@@ -1,10 +1,10 @@
 <?php
 include 'includes' . DIRECTORY_SEPARATOR . 'init.php';
 
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 $router = new AltoRouter();
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'routes.php';
+require 'config' . DIRECTORY_SEPARATOR . 'routes.php';
 
 $match = $router->match();
 if(is_array($match)) {
