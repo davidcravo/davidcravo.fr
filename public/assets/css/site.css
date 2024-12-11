@@ -1,0 +1,30 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    font-size: 1.6em;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-color: #E5E9E8;
+    background-image: url(../images/main/background_tree_paysage.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #242424;
+}
+
+main{
+   flex: 1;
+   background-color: #e5e9e8da; 
+}
+
+article{
+    padding: 0.5rem;
+}
+
