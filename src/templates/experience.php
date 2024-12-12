@@ -1,5 +1,5 @@
 <?php 
-    $file = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'experience.csv';
+    $file = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'experience.csv';
     $jobs = array_reverse(get_csv_files($file, 'experience'));
 ?>
 

@@ -8,3 +8,4 @@ $router->map('GET', '/contact', 'contact', 'contact');
 $router->map('GET', '/login', 'login', 'login');
 $router->map('GET', '/logout', 'logout', 'logout');
 $router->map('GET', '/dashboard', 'dashboard', 'dashboard');
+$router->map('GET', '/post_contact', 'post_contact', 'post_contact');

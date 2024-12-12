@@ -1,5 +1,5 @@
 <?php 
-    $programming_languages_file = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'programing_languages.csv';
+    $programming_languages_file = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'programing_languages.csv';
     $programming_languages = get_csv_files($programming_languages_file, 'programming_languages');
 ?>
 
@@ -8,7 +8,7 @@
         <?php foreach(SKILLS_TITLES as $k => $skill_title): ?>
             <h1><?= $skill_title ?></h1>
             <?php 
-                $file = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . $k . '.csv';
+                $file = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . $k . '.csv';
                 $$skill_title = get_csv_files($file, $k);
             ?>
             <ul>

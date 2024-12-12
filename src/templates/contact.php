@@ -1,3 +1,8 @@
+<?php
+    $action = $router->generate('post_contact');
+    $action = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' .  DIRECTORY_SEPARATOR . 'post_contact.php';
+?>
+
 <main class="contact_main">
     <?php if(array_key_exists('errors', $_SESSION)): ?>
         <div>
@@ -9,7 +14,7 @@
             Votre message a bien été envoyé.
         </div>
     <?php endif; ?>
-    <form action="../components/post_contact.php" method="POST">
+    <form action=<?= $action ?> method="POST">
         <?php
             $form = new Form(isset($_SESSION['inputs']) ? $_SESSION['inputs'] : []);
             $inputValues = inputValue::getInputKeysValues();

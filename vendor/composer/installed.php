@@ -3,7 +3,7 @@
         'name' => 'david/davidcravo.fr',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '3ea590e4aae3470b3c266e401916fd9e7695a4ae',
+        'reference' => '845989afcdb25df66c8d8bc32af94b5b2919fcf5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'david/davidcravo.fr' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '3ea590e4aae3470b3c266e401916fd9e7695a4ae',
+            'reference' => '845989afcdb25df66c8d8bc32af94b5b2919fcf5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
