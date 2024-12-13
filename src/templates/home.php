@@ -5,6 +5,13 @@
 ?>
 
 <main class="home-main">
+    <div class="alert alert-danger d-flex justify-content-center">
+        Le site est en cours d'évolution mais vous pouvez consulter son ancienne version à l'adresse suivante :
+        
+    </div>
+    <div class="alert alert-success d-flex justify-content-center">
+        <a href="https://portfolio.davidcravo.fr" target="_blank">https://portfolio.davidcravo.fr</a>
+    </div>
     <section class="home_section">
         <img class="home_image" src="../assets/images/home/photo.png" alt="Photo de profil">
         <div class="home_description">

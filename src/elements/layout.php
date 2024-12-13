@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="/assets/css/education.css">
     <link rel="stylesheet" href="/assets/css/skills.css">
 
+    <link rel="icon" href="/assets/images/david_cravo_logo.jpeg">
+
     <!-- <script src="/assets/js/home.js" defer></script> -->
     <!-- <script src="/assets/js/menu.js" defer></script> -->
     <script src="https://kit.fontawesome.com/f129c06877.js" crossorigin="anonymous"></script>

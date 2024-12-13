@@ -1,2 +1,1 @@
-RewriteEngine On
-RewriteRule ^templates/(.*)$ ../templates/$1 [L]
+
