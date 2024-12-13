@@ -10,8 +10,7 @@
 }
 
 .contact_main label{
-    margin: 1rem 0 0.5rem 0;
-    font-size: 2rem;
+    margin: 1rem;
 }
 
 .contact_main input,
@@ -45,7 +44,6 @@
 @media (min-width: 600px) and (max-width: 1024px)
 {
     .contact_main{
-        font-size: 2rem;
     }
 }
 
@@ -53,7 +51,6 @@
 {
     .contact_main{
         width: 80rem;
-        font-size: 3rem;
         margin-right:auto;
         margin-left:auto;
     }
