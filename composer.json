@@ -14,5 +14,8 @@
             "email": "contact@davidcravo.fr"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/var-dumper": "^7.2",
+        "nikic/fast-route": "^1.3"
+    }
 }
