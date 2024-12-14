@@ -1,11 +1,19 @@
-<?php 
+<?php
+
+use Database\DbManager;
+
     include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'init.php';
 
     require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'head.php';
-    require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+    //require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
 
-    $file = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'experience.csv';
-    $jobs = array_reverse(get_csv_files($file, 'experience'));
+    
+
+    $config = include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'db_config.php';
+    $db = new DbManager($config['host'], $config['dbname'], $config['user'], $config['password']);
+
+    $sql = "SELECT * FROM experience";
+    $jobs = array_reverse($db->db_sql($sql));
 ?>
 
 <main class="experience_main">
