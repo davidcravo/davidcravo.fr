@@ -1,6 +1,6 @@
 <?php
 
-namespace Database;
+namespace App\Database;
 
 use \PDO;
 use \PDOException;
@@ -33,13 +33,35 @@ class DbManager{
         } 
     }
     
-    function db_sql(string $sql){
+    function table_exists(string $table_name): bool{
+        $pdo = $this->db_access();
+        try{
+            $query = "DESCRIBE $table_name";
+            $pdo->query($query);
+            echo "La table $table_name existe déjà !" . PHP_EOL;
+            return true;
+        }catch(PDOException $e){
+            echo $e->getMessage() . PHP_EOL;
+            return false;
+        }
+    }
+
+    function create_table(string $sql): bool{
+        $pdo = $this->db_access();
+        try{
+           $pdo->exec($sql) ;
+           echo "Table créée avec succès !" . PHP_EOL;
+           return true;
+        }catch(PDOException $e){
+            echo "Erreur lors de la création de la table : " . $e->getMessage() . PHP_EOL;
+            return false;
+        }
+    }
+
+    function selectAll(string $name){
+        $sql = "SELECT * FROM $name";
         $pdo = $this->db_access();
         $query = $pdo->query($sql);
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
-
 }
-
-
-

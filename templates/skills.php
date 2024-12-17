@@ -1,11 +1,13 @@
-<?php 
-    include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'init.php';
+<?php
 
-    require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'head.php';
-    require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+    use App\Database\DbManager;
+    use App\Skill;
 
-    $programming_languages_file = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'programing_languages.csv';
-    $programming_languages = get_csv_files($programming_languages_file, 'programming_languages');
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+
+    $config = include dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'db_config.php';
+    $db = new DbManager($config['host'], $config['dbname'], $config['user'], $config['password']);
+
 ?>
 
 <main class="skills_main">
@@ -13,16 +15,15 @@
         <?php foreach(SKILLS_TITLES as $k => $skill_title): ?>
             <h1><?= $skill_title ?></h1>
             <?php 
-                $file = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . $k . '.csv';
-                $$skill_title = get_csv_files($file, $k);
+                $$skill_title = $db->selectAll($k);
             ?>
             <ul>
                 <?php 
                     foreach($$skill_title as $skill_title)
                     {
-                        $skill = new Skill($skill_title['name'], $skill_title['logo'], $skill_title['description']); 
+                        $skill = new Skill($skill_title['id'], $skill_title['name'], $skill_title['logo'], $skill_title['description']); 
                         echo $skill->skill_html();
-                    }; 
+                    };
                 ?>
             </ul>
         <?php endforeach ?>

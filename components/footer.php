@@ -1,3 +1,5 @@
+<?php require_once dirname(__DIR__) . DIRECTORY_SEPARATOR .'config' . DIRECTORY_SEPARATOR . 'constants.php'; ?>
+    
     <footer>
         <a href="https://davidcravo.fr/" target="_blank">David CRAVO</a>
         <div class="footer_links">
