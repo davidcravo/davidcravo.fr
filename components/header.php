@@ -2,8 +2,11 @@
     $title = $title ?? "David CRAVO";
     $description = $description ?? "Mon site Web";
 
+    use App\Menu;
+
+
     require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'constants.php';
-    require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'navigation.php';
+    // require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'navigation.php';
     require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'init.php';
 ?>
 
@@ -49,13 +52,13 @@
             </div>
             <nav >
                 <ul>
-                    <?= nav_item('/templates/home.php', 'Acceuil') ?>
-                    <?= nav_item('/templates/experience.php', 'Expérience') ?>
-                    <?= nav_item('/templates/education.php', 'Formations') ?>
-                    <?= nav_item('/templates/skills.php', 'Compétences') ?>
-                    <?= nav_item('/templates/achievements.php', 'Réalisations') ?>
-                    <?= nav_item('/templates/contact.php', 'Contact') ?>
-                    <?= nav_item('/templates/dashboard.php', 'Dashboard') ?>
+                    <?php $menu = new Menu('/templates/home.php', 'Acceuil'); echo $menu->toHTML() ?>
+                    <?php $menu = new Menu('/templates/experience.php', 'Expérience'); echo $menu->toHTML() ?>
+                    <?php $menu = new Menu('/templates/education.php', 'Formations'); echo $menu->toHTML() ?>
+                    <?php $menu = new Menu('/templates/skills.php', 'Compétences'); echo $menu->toHTML() ?>
+                    <?php $menu = new Menu('/templates/achievements.php', 'Réalisations'); echo $menu->toHTML() ?>
+                    <?php $menu = new Menu('/templates/contact.php', 'Contact'); echo $menu->toHTML() ?>
+                    <?php $menu = new Menu('/templates/dashboard.php', 'Dashboard'); echo $menu->toHTML() ?>
                 </ul>
             </nav>
             <div class="links">
