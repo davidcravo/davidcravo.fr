@@ -1,0 +1,24 @@
+.profile_main{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile_main article{
+    text-align: justify;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+@media (min-width: 600px) and (max-width: 1024px)
+{
+    .profile_main{
+        width: 60rem;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .profile_main{
+        width: 80rem;
+    }
+} 
