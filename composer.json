@@ -1,11 +1,19 @@
 {
     "name": "david/davidcravo.fr",
+<<<<<<< HEAD
     "description": "Mon site principal pour me présenter",
+=======
+    "description": "Mon site pour me présenter",
+>>>>>>> database
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
+<<<<<<< HEAD
             "App\\": "assets/"
+=======
+            "App\\": "class/"
+>>>>>>> database
         }
     },
     "authors": [
@@ -16,6 +24,10 @@
     ],
     "require": {
         "symfony/var-dumper": "^7.2",
+<<<<<<< HEAD
         "altorouter/altorouter": "^2.0"
+=======
+        "nikic/fast-route": "^1.3"
+>>>>>>> database
     }
 }

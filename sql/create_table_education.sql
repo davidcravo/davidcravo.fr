@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS education (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    training_center VARCHAR(255) NOT NULL,
+    image VARCHAR(255)
+) ENGINE= InnoDB DEFAULT CHARSET=utf8mb4;

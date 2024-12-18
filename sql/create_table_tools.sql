@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS tools (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    logo TEXT,
+    description VARCHAR(255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

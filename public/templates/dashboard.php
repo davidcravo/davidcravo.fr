@@ -1,4 +1,9 @@
 <?php
+<<<<<<< HEAD:public/templates/dashboard.php
+=======
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+
+>>>>>>> database:templates/dashboard.php
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'authentification.php';
 
 $link = $router->generate('dashboard');

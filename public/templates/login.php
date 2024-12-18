@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD:public/templates/login.php
+=======
+require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+>>>>>>> database:templates/login.php
 
 $link = $router->generate('dashboard');
 $error = null;

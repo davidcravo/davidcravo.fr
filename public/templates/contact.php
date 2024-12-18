@@ -1,3 +1,10 @@
+<<<<<<< HEAD:public/templates/contact.php
+=======
+<?php
+    require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
+?>
+
+>>>>>>> database:templates/contact.php
 <main class="contact_main">
     <?php if(array_key_exists('errors', $_SESSION)): ?>
         <div>

@@ -10,8 +10,12 @@
 }
 
 .contact_main label{
+<<<<<<< HEAD:public/assets/css/contact.css
     margin: 1rem 0 0.5rem 1rem;
     font-size: 2rem;
+=======
+    margin: 1rem;
+>>>>>>> database:assets/css/style_contact.css
 }
 
 .contact_main input,
@@ -45,7 +49,6 @@
 @media (min-width: 600px) and (max-width: 1024px)
 {
     .contact_main{
-        font-size: 2rem;
     }
 }
 
