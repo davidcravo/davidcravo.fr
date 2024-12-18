@@ -3,7 +3,7 @@
     $description = $description ?? "Mon site Web";
 
     use App\Menu;
-
+    use App\Config\Config;
 
     require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'constants.php';
     // require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'navigation.php';
@@ -47,8 +47,8 @@
                 <img src="../assets/images/david_cravo_logo.jpeg" alt="Logo de David CRAVO">
             </a>
             <div class="links">
-                <a href="<?= LINKS['github'] ?>" target="_blank"><img src="../assets/images/header/github.png" alt="logo Github"></a>
-                <a href="<?= LINKS['linkedin'] ?>" target="_blank"><img src="/assets/images/header/linkedin.png" alt="logo Linkedin"></a>
+                <a href="<?= Config::LINKS['github'] ?>" target="_blank"><img src="../assets/images/header/github.png" alt="logo Github"></a>
+                <a href="<?= Config::LINKS['linkedin'] ?>" target="_blank"><img src="/assets/images/header/linkedin.png" alt="logo Linkedin"></a>
             </div>
             <nav >
                 <ul>

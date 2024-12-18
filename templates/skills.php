@@ -1,6 +1,7 @@
 <?php
 
     use App\Database\DbManager;
+    use App\Config\Config;
     use App\Skill;
 
     require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'header.php';
@@ -12,7 +13,7 @@
 
 <main class="skills_main">
     <article class="skills_article">
-        <?php foreach(SKILLS_TITLES as $k => $skill_title): ?>
+        <?php foreach(Config::SKILLS_TITLES as $k => $skill_title): ?>
             <h1><?= $skill_title ?></h1>
             <?php 
                 $$skill_title = $db->selectAll($k);
@@ -22,7 +23,7 @@
                     foreach($$skill_title as $skill_title)
                     {
                         $skill = new Skill($skill_title['id'], $skill_title['name'], $skill_title['logo'], $skill_title['description']); 
-                        echo $skill->skill_html();
+                        echo $skill->toHTML();
                     };
                 ?>
             </ul>
